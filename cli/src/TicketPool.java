@@ -1,9 +1,14 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class TicketPool {
     private int maximumTicketCapacity;
     private Queue<Ticket> ticketQueue;
+
+    //creating timestamp
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
 
     public TicketPool(int maximumTicketCapacity) {
         this.maximumTicketCapacity = maximumTicketCapacity;
@@ -12,6 +17,7 @@ public class TicketPool {
 
     // Vendor who is the Producer will call the addTicket() method
     public synchronized void addTicket(Ticket ticket){
+
         while (ticketQueue.size() >= maximumTicketCapacity){
             try {
                 wait();
@@ -23,7 +29,8 @@ public class TicketPool {
 
         this.ticketQueue.add(ticket);
         notifyAll(); // Notify all the waiting threads
-        System.out.println("Ticket added by - " + Thread.currentThread().getName() + " - current size is " + ticketQueue.size()+" - ticket ID "+ticket.getTicketId());
+        String timestampForAdd = LocalDateTime.now().format(formatter);
+        System.out.println("[" + timestampForAdd + "] " + "Ticket added by - " + Thread.currentThread().getName() + " - current size is " + ticketQueue.size()+" - ticket ID "+ticket.getTicketId());
     }
 
     // Customer who is the Consumer will call the buyTicket() method
@@ -38,7 +45,8 @@ public class TicketPool {
 
         Ticket ticket = ticketQueue.poll();
         notifyAll();
-        System.out.println("Ticket bought by - " + Thread.currentThread().getName() + " - current size is - " + ticketQueue.size() + " - Ticket is - " + ticket);
+        String timestamp = LocalDateTime.now().format(formatter);
+        System.out.println("[" + timestamp + "] " + "Ticket bought by - " + Thread.currentThread().getName() + " - current size is - " + ticketQueue.size() + " - Ticket is - " + ticket);
         return ticket;
     }
 }

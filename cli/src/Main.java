@@ -25,10 +25,11 @@ public class Main {
 
                 if (choice == 1) {
                     System.out.println();
-                    int TotalTickets = getValidInput(input, "Enter total number of tickets: ");
+                    int MaxTicketCapacity = getValidInput(input, "Enter maximum ticket capacity: ");
+                    int TotalTickets = getValidInput(input, "Enter total number of tickets: ",MaxTicketCapacity);
                     int TicketReleaseRate = getValidInput(input, "Enter ticket release rate: ");
                     int CustomerRetrievalRate = getValidInput(input, "Enter customer retrieval rate: ");
-                    int MaxTicketCapacity = getValidInput(input, "Enter maximum ticket capacity: ", 50);
+
 
                     //display and save configuration
                     Configuration config = new Configuration(TotalTickets, TicketReleaseRate, CustomerRetrievalRate, MaxTicketCapacity);
@@ -76,7 +77,7 @@ public class Main {
                     input.close();
 
                 } else {
-                    System.out.println("Invalid choice. Please enter 1 to create a new configuration or 2 to load an existing one: ");
+                    System.out.print("Invalid choice. Please enter 1 to create a new configuration or 2 to load an existing one: ");
                 }
 
             } catch (Exception e) {
@@ -149,9 +150,9 @@ public class Main {
             vendorThread.start();
         }
 
-        Customer[] customers = new Customer[2]; // Creating array of customers and buy/remove tickets from ticket pool
+        Customer[] customers = new Customer[3]; // Creating array of customers and buy/remove tickets from ticket pool
         for (int i = 0; i < customers.length; i++) {
-            customers[i] = new Customer(i, ticketPool, 6, 5);
+            customers[i] = new Customer(i, ticketPool, 6, 5); //quantity is how many tickets 1 customer buy
             Thread customerThread = new Thread(customers[i], "Customer ID-" + (i + 1));
             customerThread.start();
         }
