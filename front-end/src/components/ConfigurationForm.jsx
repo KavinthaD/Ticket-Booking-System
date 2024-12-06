@@ -52,9 +52,8 @@ const ConfigurationForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-    <div className="bg-black bg-opacity-80 rounded-md p-6 ">
-      <h1>System Configuration</h1>
+    <div className="bg-black bg-opacity-80 rounded-md p-6 text-white">
+      <h1 className="text-2xl font-bold mb-4 text-center">System Configuration</h1>
       
       <form onSubmit={handleSubmit}>
         <div className="my-3">
@@ -101,9 +100,8 @@ const ConfigurationForm = () => {
           {errors.maxTicketCapacity && <p style={{ color: "red" }}>{errors.maxTicketCapacity}</p>}
         </div>
 
-        <button type="submit" className="bg-green-500">Save Configuration</button>
+        <button type="submit" className="bg-blue-500">Save Configuration</button>
       </form>
-    </div>
     </div>
   );
 };
