@@ -53,13 +53,6 @@ public class Configuration {
             System.out.println("Error saving configuration: " + e.getMessage());
         }
     }
-    private static void saveCurrentConfigId() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("config_id.txt"))) {
-            writer.write(String.valueOf(currentConfigId));
-        } catch (IOException e) {
-            System.out.println("Error saving config ID: " + e.getMessage());
-        }
-    }
 
     private static int loadCurrentConfigId() {
         try (BufferedReader reader = new BufferedReader(new FileReader("config_id.txt"))) {

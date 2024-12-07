@@ -4,21 +4,26 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class TicketPool {
-    private int maximumTicketCapacity;
+    private int totalTickets;
     private Queue<Ticket> ticketQueue;
+    public int ticketCount = 0;
 
     //creating timestamp
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
 
-    public TicketPool(int maximumTicketCapacity) {
-        this.maximumTicketCapacity = maximumTicketCapacity;
+    public TicketPool(int totalTickets) {
+        this.totalTickets = totalTickets;
         this.ticketQueue = new LinkedList<>();
+    }
+
+    public int getTicketCount() {
+        return ticketCount;
     }
 
     // Vendor who is the Producer will call the addTicket() method
     public synchronized void addTicket(Ticket ticket){
 
-        while (ticketQueue.size() >= maximumTicketCapacity){
+        while (ticketQueue.size() >= totalTickets){
             try {
                 wait();
             } catch (InterruptedException e) {
@@ -28,6 +33,7 @@ public class TicketPool {
         }
 
         this.ticketQueue.add(ticket);
+        ticketCount++;
         notifyAll(); // Notify all the waiting threads
         String timestampForAdd = LocalDateTime.now().format(formatter);
         System.out.println("[" + timestampForAdd + "] " + "Ticket added by - " + Thread.currentThread().getName() + " - current size is " + ticketQueue.size()+" - ticket ID "+ticket.getTicketId());
