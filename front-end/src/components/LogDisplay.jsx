@@ -1,25 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const LogDisplay = () => {
+const LogDisplay = ({ showLogs }) => {
+  const [logs, setLogs] = useState([]);
+  const [error, setError] = useState(null);
 
-return (
-<div className="bg-black bg-opacity-80 rounded-md p-6 text-white overflow-y-auto" style={{ maxHeight: '300px' }}>
-    <h1 className="mb-2 text-2xl">Logs</h1>
-    <pre>
-        [2024-12-06 17:29:39.723] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t1<br/>
-        [2024-12-06 17:29:39.725] Ticket bought by - Customer ID-1 - current size is - 0 - Ticket is - Ticket ticketId=v1t1, eventName='Event', ticketPrice=1000<br/>
-        [2024-12-06 17:29:39.727] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t1<br/>
-        [2024-12-06 17:29:39.727] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket ticketId=v2t1, eventName='Event', ticketPrice=1000<br/>
-        [2024-12-06 17:29:39.727] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket ticketId=v2t1, eventName='Event', ticketPrice=1000<br/>
-        [2024-12-06 17:29:39.727] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket ticketId=v2t1, eventName='Event', ticketPrice=1000<br/>
-        [2024-12-06 17:29:39.727] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket ticketId=v2t1, eventName='Event', ticketPrice=1000<br/>
-        [2024-12-06 17:29:39.727] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket ticketId=v2t1, eventName='Event', ticketPrice=1000<br/>
-        [2024-12-06 17:29:39.727] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket ticketId=v2t1, eventName='Event', ticketPrice=1000<br/>
-        [2024-12-06 17:29:39.727] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket ticketId=v2t1, eventName='Event', ticketPrice=1000<br/>
-    </pre>
-</div>
+  useEffect(() => {
+    let interval;
 
-);
-}
+    const fetchLogs = async () => {
+      try {
+        const response = await fetch("http://localhost:8080/api/logs");
+        if (!response.ok) {
+          throw new Error("Failed to fetch logs");
+        }
+        const data = await response.json();
+        setLogs(data);
+      } catch (err) {
+        setError(err.message);
+      }
+    };
+
+    if (showLogs) {
+      // Fetch logs immediately and start polling
+      fetchLogs();
+      interval = setInterval(fetchLogs, 2000); // Poll logs every 2 seconds
+    } else {
+      // Clear logs and stop polling when system is stopped
+      setLogs([]);
+      setError(null);
+    }
+
+    return () => clearInterval(interval); // Cleanup interval on unmount or when `showLogs` changes
+  }, [showLogs]);
+
+  if (!showLogs) return null;
+
+  return (
+    <div
+      className="bg-black bg-opacity-80 rounded-md p-6 text-white overflow-y-auto"
+      style={{ maxHeight: "10000px" }}
+    >
+      <h1 className="mb-2 text-2xl">Logs</h1>
+      {error ? (
+        <p className="text-red-500">Error: {error}</p>
+      ) : (
+        <pre>
+          {logs.length > 0 ? (
+            logs.map((log, index) => <div key={index}>{log}</div>)
+          ) : (
+            <p>No logs available</p>
+          )}
+        </pre>
+      )}
+    </div>
+  );
+};
 
 export default LogDisplay;

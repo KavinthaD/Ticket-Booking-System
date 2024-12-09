@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import TicketDataService from "../services/ticket.service";
 
 const ConfigurationForm = () => {
   // State for form fields
@@ -23,33 +23,42 @@ const ConfigurationForm = () => {
   const validate = () => {
     const newErrors = {};
     if (!config.totalTickets || config.totalTickets <= 0) {
-      newErrors.totalTickets = "Total tickets must be a positive number.";
+      newErrors.totalTickets = "Total tickets must be a positive number and cannot be empty.";
     }
     if (!config.ticketReleaseRate || config.ticketReleaseRate <= 0) {
-      newErrors.ticketReleaseRate = "Ticket release rate must be a positive number.";
+      newErrors.ticketReleaseRate = "Ticket release rate must be greater than 200ms and cannot be empty.";
     }
-    if (!config.customerRetrievalRate || config.customerRetrievalRate <= 0) {
-      newErrors.customerRetrievalRate = "Customer retrieval rate must be a positive number.";
+    if (!config.customerRetrievalRate || config.customerRetrievalRate <= 200) {
+      newErrors.customerRetrievalRate = "Customer retrieval rate must be greater than 200ms and cannot be empty.";
     }
     if (!config.maxTicketCapacity || config.maxTicketCapacity <= 0) {
-      newErrors.maxTicketCapacity = "Maximum ticket capacity must be a positive number.";
+      newErrors.maxTicketCapacity = "Maximum ticket capacity must be a positive number and cannot be empty.";
     }
+
+    if(config.totalTickets > config.maxTicketCapacity){
+      newErrors.totalTickets = "Total tickets cannot exceed max ticket capacity.";
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle form submission
+  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return; // Stop if validation fails
-
+  
     try {
+      // Call TicketDataService.create with form data
+      const response = await TicketDataService.create(config);
       alert("Configuration saved successfully: " + JSON.stringify(response.data));
     } catch (error) {
       console.error("Error saving configuration:", error);
       alert("Failed to save configuration. Check the backend.");
     }
   };
+  
 
   return (
     <div className="bg-black bg-opacity-80 rounded-md p-6 text-white">

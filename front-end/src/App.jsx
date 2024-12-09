@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import ConfigurationForm from "./components/ConfigurationForm";
 import TicketDisplay from "./components/TicketDisplay";
 import LogDisplay from "./components/LogDisplay";
 import ControlPanel from "./components/ControlPanel";
 
 function App() {
+  const [showLogs, setShowLogs] = useState(false);
+
+  const handleStart = (isRunning) => {
+    setShowLogs(isRunning);
+  };
+
   return (
     <div className="flex flex-col h-screen" style={{ backgroundColor: "#262626" }}>
       {/* Control Panel at the top */}
       <div className="flex justify-center py-4 shadow-md" style={{ backgroundColor: "#4a4949" }}>
-        <ControlPanel />
+        <ControlPanel onStart={handleStart} />
       </div>
 
       {/* Main content area */}
@@ -27,7 +33,7 @@ function App() {
 
       {/* LogDisplay at the bottom */}
       <div className="w-full bg-black text-white p-4">
-        <LogDisplay />
+        <LogDisplay showLogs={showLogs} />
       </div>
     </div>
   );
