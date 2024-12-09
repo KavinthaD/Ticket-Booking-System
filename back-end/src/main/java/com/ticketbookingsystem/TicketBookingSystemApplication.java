@@ -1,13 +1,13 @@
-package com.example.backend;
+package com.ticketbookingsystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BackEndApplication {
+public class TicketBookingSystemApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BackEndApplication.class, args);
+        SpringApplication.run(TicketBookingSystemApplication.class, args);
     }
 
 }

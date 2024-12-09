@@ -1,0 +1,263 @@
+2024-12-09 23:13:47.147 [restartedMain] INFO  o.e.t.TicketBookingSystemApplication - Starting TicketBookingSystemApplication using Java 21.0.2 with PID 17740 (C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem\target\classes started by Kavi in C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem)
+2024-12-09 23:13:47.147 [restartedMain] INFO  o.e.t.TicketBookingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 23:13:47.248 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-09 23:13:47.256 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2024-12-09 23:13:47.320 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-09 23:13:47.321 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 23:13:47.321 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-09 23:13:47.331 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 23:13:47.332 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 183 ms
+2024-12-09 23:13:47.340 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-12-09 23:13:47.341 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2024-12-09 23:13:47.342 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-12-09 23:13:47.342 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-12-09 23:13:47.358 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-09 23:13:47.359 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-09 23:13:47.367 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-09 23:13:47.368 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-09 23:13:47.368 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-09 23:13:47.399 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-09 23:13:47.401 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:13:47.438 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-09 23:13:47.504 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-12-09 23:13:47.511 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 23:13:47.513 [restartedMain] INFO  o.e.t.TicketBookingSystemApplication - Started TicketBookingSystemApplication in 0.383 seconds (process running for 236.73)
+2024-12-09 23:13:47.514 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-12-09 23:13:48.313 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 23:13:48.313 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 23:13:48.313 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-12-09 23:14:38.114 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-12-09 23:14:38.114 [Thread-7] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-09 23:14:38.117 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-09 23:14:38.118 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:14:38.118 [Thread-7] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2024-12-09 23:14:38.119 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-12-09 23:14:38.119 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-12-09 23:15:21 - Starting TicketBookingSystemApplication using Java 21.0.2 with PID 17740 (C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem\target\classes started by Kavi in C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem)
+2024-12-09 23:15:21 - Starting TicketBookingSystemApplication using Java 21.0.2 with PID 17740 (C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem\target\classes started by Kavi in C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem)
+2024-12-09 23:15:21 - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-09 23:15:21 - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-09 23:15:21 - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 23:15:21 - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 23:15:21 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-09 23:15:21 - Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2024-12-09 23:15:22 - Tomcat initialized with port 8080 (http)
+2024-12-09 23:15:22 - Starting service [Tomcat]
+2024-12-09 23:15:22 - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-09 23:15:22 - Initializing Spring embedded WebApplicationContext
+2024-12-09 23:15:22 - Root WebApplicationContext: initialization completed in 171 ms
+2024-12-09 23:15:22 - HikariPool-3 - Starting...
+2024-12-09 23:15:22 - HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2024-12-09 23:15:22 - HikariPool-3 - Start completed.
+2024-12-09 23:15:22 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-12-09 23:15:22 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-09 23:15:22 - HHH000026: Second-level cache disabled
+2024-12-09 23:15:22 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-09 23:15:22 - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-09 23:15:22 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-09 23:15:22 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-09 23:15:22 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:15:22 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-09 23:15:22 - LiveReload server is running on port 35729
+2024-12-09 23:15:22 - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 23:15:22 - Started TicketBookingSystemApplication in 0.351 seconds (process running for 331.392)
+2024-12-09 23:15:22 - Started TicketBookingSystemApplication in 0.351 seconds (process running for 331.392)
+2024-12-09 23:15:22 - Condition evaluation unchanged
+2024-12-09 23:15:48 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 23:15:48 - Initializing Servlet 'dispatcherServlet'
+2024-12-09 23:15:48 - Completed initialization in 1 ms
+2024-12-09 23:16:16 - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-09 23:16:16 - Graceful shutdown complete
+2024-12-09 23:16:16 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:16:16 - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2024-12-09 23:16:16 - HikariPool-3 - Shutdown initiated...
+2024-12-09 23:16:16 - HikariPool-3 - Shutdown completed.
+2024-12-09 23:16:23 - Starting TicketBookingSystemApplication using Java 21.0.2 with PID 17212 (C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem\target\classes started by Kavi in C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem)
+2024-12-09 23:16:23 - Starting TicketBookingSystemApplication using Java 21.0.2 with PID 17212 (C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem\target\classes started by Kavi in C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem)
+2024-12-09 23:16:23 - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-09 23:16:23 - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-09 23:16:23 - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 23:16:23 - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 23:16:23 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-09 23:16:23 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-09 23:16:23 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-09 23:16:23 - Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2024-12-09 23:16:24 - Tomcat initialized with port 8080 (http)
+2024-12-09 23:16:24 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-09 23:16:24 - Starting service [Tomcat]
+2024-12-09 23:16:24 - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-09 23:16:24 - Initializing Spring embedded WebApplicationContext
+2024-12-09 23:16:24 - Root WebApplicationContext: initialization completed in 816 ms
+2024-12-09 23:16:24 - HikariPool-1 - Starting...
+2024-12-09 23:16:24 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-12-09 23:16:24 - HikariPool-1 - Start completed.
+2024-12-09 23:16:24 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-12-09 23:16:24 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-09 23:16:24 - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-09 23:16:24 - HHH000026: Second-level cache disabled
+2024-12-09 23:16:24 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-09 23:16:24 - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-09 23:16:24 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-09 23:16:25 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-09 23:16:25 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:16:25 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-09 23:16:25 - LiveReload server is running on port 35729
+2024-12-09 23:16:25 - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-09 23:16:25 - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 23:16:25 - Started TicketBookingSystemApplication in 2.55 seconds (process running for 3.004)
+2024-12-09 23:16:25 - Started TicketBookingSystemApplication in 2.55 seconds (process running for 3.004)
+2024-12-09 23:16:40 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 23:16:40 - Initializing Servlet 'dispatcherServlet'
+2024-12-09 23:16:40 - Completed initialization in 0 ms
+2024-12-09 23:18:22 - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-09 23:18:22 - Graceful shutdown complete
+2024-12-09 23:18:22 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:18:22 - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2024-12-09 23:18:22 - HikariPool-1 - Shutdown initiated...
+2024-12-09 23:18:22 - HikariPool-1 - Shutdown completed.
+2024-12-09 23:18:24.175 [restartedMain] INFO  o.e.t.TicketBookingSystemApplication - Starting TicketBookingSystemApplication using Java 21.0.2 with PID 9272 (C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem\target\classes started by Kavi in C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem)
+2024-12-09 23:18:24.176 [restartedMain] INFO  o.e.t.TicketBookingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 23:18:24.211 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-09 23:18:24.212 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-09 23:18:24.606 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-09 23:18:24.644 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2024-12-09 23:18:24.947 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-09 23:18:24.956 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 23:18:24.956 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-09 23:18:24.986 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 23:18:24.987 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 774 ms
+2024-12-09 23:18:25.006 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-09 23:18:25.120 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-12-09 23:18:25.121 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-09 23:18:25.128 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-12-09 23:18:25.216 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-09 23:18:25.254 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-09 23:18:25.276 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-09 23:18:25.441 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-09 23:18:25.470 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-09 23:18:25.481 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-09 23:18:25.967 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-09 23:18:26.008 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:18:26.152 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-09 23:18:26.371 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-12-09 23:18:26.393 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 23:18:26.397 [restartedMain] INFO  o.e.t.TicketBookingSystemApplication - Started TicketBookingSystemApplication in 2.504 seconds (process running for 2.983)
+2024-12-09 23:18:48.343 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 23:18:48.343 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 23:18:48.344 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-09 23:27:22.958 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-12-09 23:27:22.961 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-09 23:27:22.963 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-09 23:27:22.966 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:27:22.970 [Thread-5] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2024-12-09 23:27:22.971 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-09 23:27:22.972 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-09 23:39:47.514 [restartedMain] INFO  o.e.t.TicketBookingSystemApplication - Starting TicketBookingSystemApplication using Java 21.0.2 with PID 9272 (C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem\target\classes started by Kavi in C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem)
+2024-12-09 23:39:47.514 [restartedMain] INFO  o.e.t.TicketBookingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 23:39:47.623 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-09 23:39:47.632 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2024-12-09 23:39:47.746 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-09 23:39:47.747 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 23:39:47.747 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-09 23:39:47.759 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 23:39:47.759 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 243 ms
+2024-12-09 23:39:47.767 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-12-09 23:39:47.768 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2024-12-09 23:39:47.768 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-12-09 23:39:47.769 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-12-09 23:39:47.784 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-09 23:39:47.786 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-09 23:39:47.792 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-09 23:39:47.793 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-09 23:39:47.794 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-09 23:39:47.827 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-09 23:39:47.829 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:39:47.867 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-09 23:39:47.932 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-12-09 23:39:47.939 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 23:39:47.940 [restartedMain] INFO  o.e.t.TicketBookingSystemApplication - Started TicketBookingSystemApplication in 0.443 seconds (process running for 1284.526)
+2024-12-09 23:39:47.942 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-12-09 23:39:48.312 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 23:39:48.312 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 23:39:48.312 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-12-09 23:41:17.513 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-09 23:41:17.515 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-09 23:41:17.517 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:41:17.517 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2024-12-09 23:41:17.518 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-12-09 23:41:17.518 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-12-09 23:41:24.343 [restartedMain] INFO  o.e.t.TicketBookingSystemApplication - Starting TicketBookingSystemApplication using Java 21.0.2 with PID 7284 (C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem\target\classes started by Kavi in C:\Users\User\IdeaProjects\to springboot test\TicketBookingSystem)
+2024-12-09 23:41:24.344 [restartedMain] INFO  o.e.t.TicketBookingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 23:41:24.376 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-09 23:41:24.376 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-09 23:41:24.779 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-09 23:41:24.815 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
+2024-12-09 23:41:25.113 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-09 23:41:25.121 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 23:41:25.122 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-09 23:41:25.148 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 23:41:25.149 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 773 ms
+2024-12-09 23:41:25.168 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-09 23:41:25.275 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-12-09 23:41:25.277 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-09 23:41:25.283 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-12-09 23:41:25.359 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-09 23:41:25.398 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-09 23:41:25.418 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-09 23:41:25.577 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-09 23:41:25.606 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-09 23:41:25.616 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-09 23:41:26.093 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-09 23:41:26.131 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:41:26.275 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-09 23:41:26.487 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-12-09 23:41:26.508 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 23:41:26.513 [restartedMain] INFO  o.e.t.TicketBookingSystemApplication - Started TicketBookingSystemApplication in 2.461 seconds (process running for 3.021)
+2024-12-09 23:41:31.044 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-09 23:41:31.047 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-09 23:41:31.050 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:41:31.054 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2024-12-09 23:41:31.054 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-09 23:41:31.055 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
