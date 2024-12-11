@@ -22,22 +22,25 @@ const ConfigurationForm = ({ onSaveConfig }) => {
   // Validate form inputs
   const validate = () => {
     const newErrors = {};
+    if (!config.maxTicketCapacity || config.maxTicketCapacity <= 0) {
+      newErrors.maxTicketCapacity = "Maximum ticket capacity must be a positive number and cannot be empty.";
+    }
     if (!config.totalTickets || config.totalTickets <= 0) {
       newErrors.totalTickets = "Total tickets must be a positive number and cannot be empty.";
     }
+    if(config.totalTickets > config.maxTicketCapacity){
+      newErrors.totalTickets = "Total tickets cannot exceed max ticket capacity.";
+    }
+
     if (!config.ticketReleaseRate || config.ticketReleaseRate < 200) {
       newErrors.ticketReleaseRate = "Ticket release rate must be greater than 200ms and cannot be empty.";
     }
     if (!config.customerRetrievalRate || config.customerRetrievalRate < 200) {
       newErrors.customerRetrievalRate = "Customer retrieval rate atleast should be 200ms and cannot be empty.";
     }
-    if (!config.maxTicketCapacity || config.maxTicketCapacity <= 0) {
-      newErrors.maxTicketCapacity = "Maximum ticket capacity must be a positive number and cannot be empty.";
-    }
+   
 
-    if(config.totalTickets > config.maxTicketCapacity){
-      newErrors.totalTickets = "Total tickets cannot exceed max ticket capacity.";
-    }
+    
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -66,6 +69,18 @@ const ConfigurationForm = ({ onSaveConfig }) => {
       <h1 className="text-2xl font-bold mb-4 text-center">System Configuration</h1>
       
       <form onSubmit={handleSubmit}>
+      <div className="my-3">
+          <label className="mr-3">Maximum Ticket Capacity:</label>
+          <br/>
+          <input className="bg-white bg-opacity-80 rounded-sm text-black"
+            type="number"
+            name="maxTicketCapacity"
+            value={config.maxTicketCapacity}
+            onChange={handleChange}
+          />
+          {errors.maxTicketCapacity && <p style={{ color: "red" }}>{errors.maxTicketCapacity}</p>}
+        </div>
+
         <div className="my-3">
           <label className="mr-3">Total Tickets:</label>
           <br/>
@@ -102,17 +117,6 @@ const ConfigurationForm = ({ onSaveConfig }) => {
           {errors.customerRetrievalRate && <p style={{ color: "red" }}>{errors.customerRetrievalRate}</p>}
         </div>
 
-        <div className="my-3">
-          <label className="mr-3">Maximum Ticket Capacity:</label>
-          <br/>
-          <input className="bg-white bg-opacity-80 rounded-sm text-black"
-            type="number"
-            name="maxTicketCapacity"
-            value={config.maxTicketCapacity}
-            onChange={handleChange}
-          />
-          {errors.maxTicketCapacity && <p style={{ color: "red" }}>{errors.maxTicketCapacity}</p>}
-        </div>
 
         <button type="submit" className="bg-blue-500">Save Configuration</button>
       </form>

@@ -13,7 +13,6 @@ const ControlPanel = ({ onStart, config }) => {
       // System is starting
       try {
         const response = await StartFlowService.create(config);
-        alert("System started successfully.");
       } catch (error) {
         console.error("Error starting the system:", error);
         alert("Failed to start the system.");

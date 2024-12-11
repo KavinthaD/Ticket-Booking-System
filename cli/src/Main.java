@@ -25,7 +25,7 @@ public class Main {
 
                 if (choice == 1) {
                     System.out.println();
-                    int MaxTicketCapacity = getValidInput(input, "Enter maximum ticket capacity: ");
+                    int MaxTicketCapacity = getValidInput(input, "Enter maximum ticket capacity : ");
                     int TotalTickets = getValidInput(input, "Enter total number of tickets: ",1,MaxTicketCapacity); //0-lower limit, 1-max limit
                     int TicketReleaseRate = getValidInput(input, "Enter ticket release rate(ms): ",0,200);
                     int CustomerRetrievalRate = getValidInput(input, "Enter customer retrieval rate(ms): ",0,200);
@@ -37,8 +37,8 @@ public class Main {
 
                     System.out.println("Max Ticket Capacity (for the event): " + config.getMaxTicketCapacity());
                     System.out.println("Total Tickets (1 vendor can add): " + config.getTotalTickets());
-                    System.out.println("Ticket Release Rate(s): " + config.getTicketReleaseRate());
-                    System.out.println("Customer Retrieval Rate(s): " + config.getCustomerRetrievalRate()+"\n");
+                    System.out.println("Ticket Release Rate(ms): " + config.getTicketReleaseRate());
+                    System.out.println("Customer Retrieval Rate(ms): " + config.getCustomerRetrievalRate()+"\n");
 
 
                     beginTicketFlow(config);
@@ -158,7 +158,7 @@ public class Main {
         Thread.sleep(500);
         System.out.println("\n");
 
-        TicketPool ticketPool = new TicketPool(config.getTotalTickets()); //create total ticket capacity and ticket queue
+        TicketPool ticketPool = new TicketPool(400); //create total ticket capacity and ticket queue
 
         Vendor[] vendors = new Vendor[4]; // Creating array of vendors and add tickets to ticket pool
         for (int i = 0; i < vendors.length; i++) {

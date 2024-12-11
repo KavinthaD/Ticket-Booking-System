@@ -1,50 +1,95 @@
-[2024-12-11 17:20:59.610] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t1
-[2024-12-11 17:20:59.610] Ticket added by - Vendor ID-4 - current size is 2 - ticket ID v4t1
-[2024-12-11 17:20:59.610] Ticket added by - Vendor ID-3 - current size is 3 - ticket ID v3t1
-[2024-12-11 17:20:59.610] Ticket added by - Vendor ID-2 - current size is 4 - ticket ID v2t1
-[2024-12-11 17:20:59.610] Ticket bought by - Customer ID-1 - current size is - 3 - Ticket is - Ticket{ticketId=v1t1, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:20:59.611] Ticket bought by - Customer ID-2 - current size is - 2 - Ticket is - Ticket{ticketId=v4t1, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:20:59.611] Ticket bought by - Customer ID-3 - current size is - 1 - Ticket is - Ticket{ticketId=v3t1, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:20:59.617] Ticket bought by - Customer ID-3 - current size is - 0 - Ticket is - Ticket{ticketId=v2t1, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:20:59.812] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t2
-[2024-12-11 17:20:59.812] Ticket bought by - Customer ID-1 - current size is - 0 - Ticket is - Ticket{ticketId=v1t2, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:20:59.812] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t2
-[2024-12-11 17:20:59.812] Ticket added by - Vendor ID-3 - current size is 2 - ticket ID v3t2
-[2024-12-11 17:20:59.812] Ticket added by - Vendor ID-4 - current size is 3 - ticket ID v4t2
-[2024-12-11 17:20:59.812] Ticket bought by - Customer ID-3 - current size is - 2 - Ticket is - Ticket{ticketId=v2t2, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:20:59.812] Ticket bought by - Customer ID-2 - current size is - 1 - Ticket is - Ticket{ticketId=v3t2, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:20:59.820] Ticket bought by - Customer ID-3 - current size is - 0 - Ticket is - Ticket{ticketId=v4t2, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:21:00.013] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t3
-[2024-12-11 17:21:00.013] Ticket added by - Vendor ID-3 - current size is 2 - ticket ID v3t3
-[2024-12-11 17:21:00.013] Ticket bought by - Customer ID-2 - current size is - 1 - Ticket is - Ticket{ticketId=v2t3, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:21:00.013] Ticket added by - Vendor ID-1 - current size is 2 - ticket ID v1t3
-[2024-12-11 17:21:00.013] Ticket added by - Vendor ID-4 - current size is 3 - ticket ID v4t3
-[2024-12-11 17:21:00.013] Ticket bought by - Customer ID-3 - current size is - 2 - Ticket is - Ticket{ticketId=v3t3, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:21:00.013] Ticket bought by - Customer ID-1 - current size is - 1 - Ticket is - Ticket{ticketId=v1t3, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:21:00.020] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket{ticketId=v4t3, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:21:00.214] Ticket added by - Vendor ID-3 - current size is 1 - ticket ID v3t4
-[2024-12-11 17:21:00.214] Ticket bought by - Customer ID-1 - current size is - 0 - Ticket is - Ticket{ticketId=v3t4, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:21:00.214] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t4
-[2024-12-11 17:21:00.214] Ticket added by - Vendor ID-4 - current size is 2 - ticket ID v4t4
-[2024-12-11 17:21:00.214] Ticket added by - Vendor ID-2 - current size is 3 - ticket ID v2t4
-[2024-12-11 17:21:00.214] Ticket bought by - Customer ID-2 - current size is - 2 - Ticket is - Ticket{ticketId=v1t4, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:21:00.220] Ticket bought by - Customer ID-1 - current size is - 1 - Ticket is - Ticket{ticketId=v4t4, eventName='Event', ticketPrice=1000}
-[2024-12-11 17:21:00.414] Ticket added by - Vendor ID-4 - current size is 2 - ticket ID v4t5
-[2024-12-11 17:21:00.414] Ticket added by - Vendor ID-2 - current size is 3 - ticket ID v2t5
-[2024-12-11 17:21:00.414] Ticket added by - Vendor ID-1 - current size is 4 - ticket ID v1t5
-[2024-12-11 17:21:00.414] Ticket added by - Vendor ID-3 - current size is 5 - ticket ID v3t5
-[2024-12-11 17:21:00.615] Ticket added by - Vendor ID-2 - current size is 6 - ticket ID v2t6
-[2024-12-11 17:21:00.615] Ticket added by - Vendor ID-4 - current size is 7 - ticket ID v4t6
-[2024-12-11 17:21:00.616] Ticket added by - Vendor ID-3 - current size is 8 - ticket ID v3t6
-[2024-12-11 17:21:00.616] Ticket added by - Vendor ID-1 - current size is 9 - ticket ID v1t6
-[2024-12-11 17:21:00.815] Ticket added by - Vendor ID-2 - current size is 10 - ticket ID v2t7
-[2024-12-11 17:21:00.815] Ticket added by - Vendor ID-4 - current size is 11 - ticket ID v4t7
-[2024-12-11 17:21:00.816] Ticket added by - Vendor ID-3 - current size is 12 - ticket ID v3t7
-[2024-12-11 17:21:00.816] Ticket added by - Vendor ID-1 - current size is 13 - ticket ID v1t7
-[2024-12-11 17:21:01.016] Ticket added by - Vendor ID-4 - current size is 14 - ticket ID v4t8
-[2024-12-11 17:21:01.016] Ticket added by - Vendor ID-2 - current size is 15 - ticket ID v2t8
-[2024-12-11 17:21:01.017] Ticket added by - Vendor ID-3 - current size is 16 - ticket ID v3t8
-[2024-12-11 17:21:01.017] Ticket added by - Vendor ID-1 - current size is 17 - ticket ID v1t8
-[2024-12-11 17:21:01.216] Ticket added by - Vendor ID-4 - current size is 18 - ticket ID v4t9
-[2024-12-11 17:21:01.216] Ticket added by - Vendor ID-2 - current size is 19 - ticket ID v2t9
-[2024-12-11 17:21:01.217] Ticket added by - Vendor ID-3 - current size is 20 - ticket ID v3t9
+[2024-12-11 20:23:25.921] Ticket added by - Vendor ID-1 - current size is 1 - Ticket info - Ticket{ticketId=v1t1, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:25.921] Ticket added by - Vendor ID-4 - current size is 2 - Ticket info - Ticket{ticketId=v4t1, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:25.921] Ticket added by - Vendor ID-3 - current size is 3 - Ticket info - Ticket{ticketId=v3t1, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:25.921] Ticket bought by - Customer ID-3 - current size is - 2 - Ticket info - Ticket{ticketId=v1t1, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:25.921] Ticket added by - Vendor ID-2 - current size is 3 - Ticket info - Ticket{ticketId=v2t1, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:25.922] Ticket bought by - Customer ID-2 - current size is - 2 - Ticket info - Ticket{ticketId=v4t1, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:25.922] Ticket bought by - Customer ID-1 - current size is - 1 - Ticket info - Ticket{ticketId=v3t1, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:25.928] Ticket bought by - Customer ID-3 - current size is - 0 - Ticket info - Ticket{ticketId=v2t1, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:26.422] Ticket added by - Vendor ID-1 - current size is 1 - Ticket info - Ticket{ticketId=v1t2, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:26.422] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket info - Ticket{ticketId=v1t2, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:26.422] Ticket added by - Vendor ID-2 - current size is 1 - Ticket info - Ticket{ticketId=v2t2, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:26.422] Ticket added by - Vendor ID-3 - current size is 2 - Ticket info - Ticket{ticketId=v3t2, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:26.422] Ticket added by - Vendor ID-4 - current size is 3 - Ticket info - Ticket{ticketId=v4t2, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:26.422] Ticket bought by - Customer ID-3 - current size is - 2 - Ticket info - Ticket{ticketId=v2t2, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:26.422] Ticket bought by - Customer ID-1 - current size is - 1 - Ticket info - Ticket{ticketId=v3t2, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:26.430] Ticket bought by - Customer ID-1 - current size is - 0 - Ticket info - Ticket{ticketId=v4t2, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:26.923] Ticket added by - Vendor ID-1 - current size is 1 - Ticket info - Ticket{ticketId=v1t3, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:26.923] Ticket bought by - Customer ID-3 - current size is - 0 - Ticket info - Ticket{ticketId=v1t3, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:26.923] Ticket added by - Vendor ID-4 - current size is 1 - Ticket info - Ticket{ticketId=v4t3, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:26.923] Ticket added by - Vendor ID-3 - current size is 2 - Ticket info - Ticket{ticketId=v3t3, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:26.923] Ticket added by - Vendor ID-2 - current size is 3 - Ticket info - Ticket{ticketId=v2t3, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:26.923] Ticket bought by - Customer ID-1 - current size is - 2 - Ticket info - Ticket{ticketId=v4t3, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:26.923] Ticket bought by - Customer ID-2 - current size is - 1 - Ticket info - Ticket{ticketId=v3t3, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:26.930] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket info - Ticket{ticketId=v2t3, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:27.424] Ticket added by - Vendor ID-1 - current size is 1 - Ticket info - Ticket{ticketId=v1t4, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:27.424] Ticket added by - Vendor ID-4 - current size is 2 - Ticket info - Ticket{ticketId=v4t4, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:27.424] Ticket bought by - Customer ID-1 - current size is - 1 - Ticket info - Ticket{ticketId=v1t4, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:27.424] Ticket added by - Vendor ID-2 - current size is 2 - Ticket info - Ticket{ticketId=v2t4, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:27.424] Ticket added by - Vendor ID-3 - current size is 3 - Ticket info - Ticket{ticketId=v3t4, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:27.424] Ticket bought by - Customer ID-2 - current size is - 2 - Ticket info - Ticket{ticketId=v4t4, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:27.424] Ticket bought by - Customer ID-3 - current size is - 1 - Ticket info - Ticket{ticketId=v2t4, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:27.924] Ticket added by - Vendor ID-2 - current size is 2 - Ticket info - Ticket{ticketId=v2t5, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:27.924] Ticket added by - Vendor ID-3 - current size is 3 - Ticket info - Ticket{ticketId=v3t5, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:27.924] Ticket added by - Vendor ID-4 - current size is 4 - Ticket info - Ticket{ticketId=v4t5, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:27.924] Ticket added by - Vendor ID-1 - current size is 5 - Ticket info - Ticket{ticketId=v1t5, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:28.425] Ticket added by - Vendor ID-1 - current size is 6 - Ticket info - Ticket{ticketId=v1t6, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:28.425] Ticket added by - Vendor ID-2 - current size is 7 - Ticket info - Ticket{ticketId=v2t6, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:28.425] Ticket added by - Vendor ID-4 - current size is 8 - Ticket info - Ticket{ticketId=v4t6, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:28.425] Ticket added by - Vendor ID-3 - current size is 9 - Ticket info - Ticket{ticketId=v3t6, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:28.926] Ticket added by - Vendor ID-3 - current size is 10 - Ticket info - Ticket{ticketId=v3t7, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:28.926] Ticket added by - Vendor ID-2 - current size is 11 - Ticket info - Ticket{ticketId=v2t7, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:28.926] Ticket added by - Vendor ID-4 - current size is 12 - Ticket info - Ticket{ticketId=v4t7, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:28.926] Ticket added by - Vendor ID-1 - current size is 13 - Ticket info - Ticket{ticketId=v1t7, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:29.427] Ticket added by - Vendor ID-1 - current size is 14 - Ticket info - Ticket{ticketId=v1t8, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:29.427] Ticket added by - Vendor ID-2 - current size is 15 - Ticket info - Ticket{ticketId=v2t8, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:29.427] Ticket added by - Vendor ID-4 - current size is 16 - Ticket info - Ticket{ticketId=v4t8, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:29.427] Ticket added by - Vendor ID-3 - current size is 17 - Ticket info - Ticket{ticketId=v3t8, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:29.928] Ticket added by - Vendor ID-3 - current size is 18 - Ticket info - Ticket{ticketId=v3t9, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:29.928] Ticket added by - Vendor ID-4 - current size is 19 - Ticket info - Ticket{ticketId=v4t9, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:29.928] Ticket added by - Vendor ID-1 - current size is 20 - Ticket info - Ticket{ticketId=v1t9, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:29.928] Ticket added by - Vendor ID-2 - current size is 21 - Ticket info - Ticket{ticketId=v2t9, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:30.429] Ticket added by - Vendor ID-3 - current size is 22 - Ticket info - Ticket{ticketId=v3t10, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:30.429] Ticket added by - Vendor ID-1 - current size is 23 - Ticket info - Ticket{ticketId=v1t10, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:30.429] Ticket added by - Vendor ID-4 - current size is 24 - Ticket info - Ticket{ticketId=v4t10, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:30.429] Ticket added by - Vendor ID-2 - current size is 25 - Ticket info - Ticket{ticketId=v2t10, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:30.929] Ticket added by - Vendor ID-1 - current size is 26 - Ticket info - Ticket{ticketId=v1t11, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:30.929] Ticket added by - Vendor ID-3 - current size is 27 - Ticket info - Ticket{ticketId=v3t11, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:30.929] Ticket added by - Vendor ID-4 - current size is 28 - Ticket info - Ticket{ticketId=v4t11, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:30.929] Ticket added by - Vendor ID-2 - current size is 29 - Ticket info - Ticket{ticketId=v2t11, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:31.430] Ticket added by - Vendor ID-4 - current size is 30 - Ticket info - Ticket{ticketId=v4t12, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:31.430] Ticket added by - Vendor ID-2 - current size is 31 - Ticket info - Ticket{ticketId=v2t12, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:31.430] Ticket added by - Vendor ID-1 - current size is 32 - Ticket info - Ticket{ticketId=v1t12, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:31.430] Ticket added by - Vendor ID-3 - current size is 33 - Ticket info - Ticket{ticketId=v3t12, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:31.930] Ticket added by - Vendor ID-2 - current size is 34 - Ticket info - Ticket{ticketId=v2t13, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:31.930] Ticket added by - Vendor ID-4 - current size is 35 - Ticket info - Ticket{ticketId=v4t13, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:31.930] Ticket added by - Vendor ID-3 - current size is 36 - Ticket info - Ticket{ticketId=v3t13, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:31.930] Ticket added by - Vendor ID-1 - current size is 37 - Ticket info - Ticket{ticketId=v1t13, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:32.431] Ticket added by - Vendor ID-2 - current size is 38 - Ticket info - Ticket{ticketId=v2t14, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:32.431] Ticket added by - Vendor ID-4 - current size is 39 - Ticket info - Ticket{ticketId=v4t14, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:32.431] Ticket added by - Vendor ID-1 - current size is 40 - Ticket info - Ticket{ticketId=v1t14, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:32.431] Ticket added by - Vendor ID-3 - current size is 41 - Ticket info - Ticket{ticketId=v3t14, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:32.932] Ticket added by - Vendor ID-4 - current size is 42 - Ticket info - Ticket{ticketId=v4t15, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:32.932] Ticket added by - Vendor ID-2 - current size is 43 - Ticket info - Ticket{ticketId=v2t15, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:32.932] Ticket added by - Vendor ID-1 - current size is 44 - Ticket info - Ticket{ticketId=v1t15, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:32.932] Ticket added by - Vendor ID-3 - current size is 45 - Ticket info - Ticket{ticketId=v3t15, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:33.432] Ticket added by - Vendor ID-4 - current size is 46 - Ticket info - Ticket{ticketId=v4t16, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:33.433] Ticket added by - Vendor ID-2 - current size is 47 - Ticket info - Ticket{ticketId=v2t16, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:33.433] Ticket added by - Vendor ID-3 - current size is 48 - Ticket info - Ticket{ticketId=v3t16, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:33.433] Ticket added by - Vendor ID-1 - current size is 49 - Ticket info - Ticket{ticketId=v1t16, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:33.933] Ticket added by - Vendor ID-4 - current size is 50 - Ticket info - Ticket{ticketId=v4t17, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:33.934] Ticket added by - Vendor ID-1 - current size is 51 - Ticket info - Ticket{ticketId=v1t17, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:33.934] Ticket added by - Vendor ID-2 - current size is 52 - Ticket info - Ticket{ticketId=v2t17, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:33.934] Ticket added by - Vendor ID-3 - current size is 53 - Ticket info - Ticket{ticketId=v3t17, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:34.434] Ticket added by - Vendor ID-4 - current size is 54 - Ticket info - Ticket{ticketId=v4t18, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:34.435] Ticket added by - Vendor ID-1 - current size is 55 - Ticket info - Ticket{ticketId=v1t18, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:34.435] Ticket added by - Vendor ID-2 - current size is 56 - Ticket info - Ticket{ticketId=v2t18, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:34.435] Ticket added by - Vendor ID-3 - current size is 57 - Ticket info - Ticket{ticketId=v3t18, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:34.936] Ticket added by - Vendor ID-1 - current size is 58 - Ticket info - Ticket{ticketId=v1t19, eventName='Movie: Deadpool 3', ticketPrice=2000.0}
+[2024-12-11 20:23:34.936] Ticket added by - Vendor ID-2 - current size is 59 - Ticket info - Ticket{ticketId=v2t19, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:34.936] Ticket added by - Vendor ID-3 - current size is 60 - Ticket info - Ticket{ticketId=v3t19, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:34.936] Ticket added by - Vendor ID-4 - current size is 61 - Ticket info - Ticket{ticketId=v4t19, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:35.436] Ticket added by - Vendor ID-3 - current size is 62 - Ticket info - Ticket{ticketId=v3t20, eventName='Cricket Match: Sri Lanka vs India', ticketPrice=1000.0}
+[2024-12-11 20:23:35.436] Ticket added by - Vendor ID-2 - current size is 63 - Ticket info - Ticket{ticketId=v2t20, eventName='Movie: Despicable Me 4', ticketPrice=2000.0}
+[2024-12-11 20:23:35.436] Ticket added by - Vendor ID-4 - current size is 64 - Ticket info - Ticket{ticketId=v4t20, eventName='Musical Festival: Spandana 3.0', ticketPrice=3000.0}
+[2024-12-11 20:23:35.436] Ticket added by - Vendor ID-1 - current size is 65 - Ticket info - Ticket{ticketId=v1t20, eventName='Movie: Deadpool 3', ticketPrice=2000.0}

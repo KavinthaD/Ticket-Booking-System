@@ -6,18 +6,16 @@ import java.util.Map;
 import java.util.Queue;
 
 public class TicketPool {
-    private int totalTickets;
+    private int ticketPoolSize;
     private Queue<Ticket> ticketQueue;
     public int ticketCount = 0;
-    private Map<Integer, Integer> vendorTicketsMap;
 
     //creating timestamp
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
 
-    public TicketPool(int totalTickets) {
-        this.totalTickets = totalTickets;
+    public TicketPool(int ticketPoolSize) {
+        this.ticketPoolSize = ticketPoolSize;
         this.ticketQueue = new LinkedList<>();
-        this.vendorTicketsMap = new HashMap<>();
     }
 
     public int getTicketCount() {
@@ -26,7 +24,7 @@ public class TicketPool {
 
     // Vendor who is the Producer will call the addTicket() method
     public synchronized void addTicket(Ticket ticket){
-        while (ticketQueue.size() >= totalTickets){
+        while (ticketQueue.size() >= ticketPoolSize){
             try {
                 wait();
             } catch (InterruptedException e) {

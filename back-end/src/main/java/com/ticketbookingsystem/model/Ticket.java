@@ -3,24 +3,25 @@ package com.ticketbookingsystem.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-import java.math.BigDecimal;
+
+
 
 @Entity
 public class Ticket {
     @Id
     private String ticketId;
     private String eventName;
-    private BigDecimal ticketPrice;
+    private double ticketPrice;
 
-    public Ticket(String ticketId, String eventName, BigDecimal ticketPrice) {
+
+
+    public Ticket(String ticketId, String eventName, double ticketPrice) {
         this.ticketId = ticketId;
         this.eventName = eventName;
         this.ticketPrice = ticketPrice;
     }
 
-    public Ticket() {
-
-    }
+    public Ticket() {}
 
     public String getTicketId() {
         return ticketId;
@@ -38,11 +39,11 @@ public class Ticket {
         this.eventName = eventName;
     }
 
-    public BigDecimal getTicketPrice() {
+    public double getTicketPrice() {
         return ticketPrice;
     }
 
-    public void setTicketPrice(BigDecimal ticketPrice) {
+    public void setTicketPrice(double ticketPrice) {
         this.ticketPrice = ticketPrice;
     }
 

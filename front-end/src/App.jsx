@@ -72,7 +72,7 @@ function App() {
 
       {/* LogDisplay at the bottom */}
       <div className="log-display">
-        <LogDisplay showLogs={showLogs} />
+        <LogDisplay showLogs={showLogs} logs={logs}/>
       </div>
     </div>
   );
