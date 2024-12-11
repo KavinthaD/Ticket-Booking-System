@@ -26,19 +26,20 @@ public class Main {
                 if (choice == 1) {
                     System.out.println();
                     int MaxTicketCapacity = getValidInput(input, "Enter maximum ticket capacity: ");
-                    int TotalTickets = getValidInput(input, "Enter total number of tickets: ",MaxTicketCapacity);
-                    int TicketReleaseRate = getValidInput(input, "Enter ticket release rate: ");
-                    int CustomerRetrievalRate = getValidInput(input, "Enter customer retrieval rate: ");
+                    int TotalTickets = getValidInput(input, "Enter total number of tickets: ",1,MaxTicketCapacity); //0-lower limit, 1-max limit
+                    int TicketReleaseRate = getValidInput(input, "Enter ticket release rate(ms): ",0,200);
+                    int CustomerRetrievalRate = getValidInput(input, "Enter customer retrieval rate(ms): ",0,200);
 
 
                     //display and save configuration
-                    Configuration config = new Configuration(TotalTickets, TicketReleaseRate, CustomerRetrievalRate, MaxTicketCapacity);
+                    Configuration config = new Configuration(MaxTicketCapacity, TotalTickets, TicketReleaseRate, CustomerRetrievalRate);
                     config.saveConfiguration();
 
-                    System.out.println("Total Tickets: " + config.getTotalTickets());
+                    System.out.println("Max Ticket Capacity (for the event): " + config.getMaxTicketCapacity());
+                    System.out.println("Total Tickets (1 vendor can add): " + config.getTotalTickets());
                     System.out.println("Ticket Release Rate(s): " + config.getTicketReleaseRate());
-                    System.out.println("Customer Retrieval Rate(s): " + config.getCustomerRetrievalRate());
-                    System.out.println("Max Ticket Capacity: " + config.getMaxTicketCapacity() + "\n");
+                    System.out.println("Customer Retrieval Rate(s): " + config.getCustomerRetrievalRate()+"\n");
+
 
                     beginTicketFlow(config);
 
@@ -101,10 +102,10 @@ public class Main {
                 if (value > 0) {
                     validInput = true; // Exit loop if input is positive
                 } else {
-                    System.out.println("Invalid input. Please enter a positive number.");
+                    System.out.println("Invalid input. Please enter a positive number minimum of 200.");
                 }
             } catch (Exception e) {
-                System.out.println("Invalid input. Please enter a positive number.");
+                System.out.println("Invalid input. Please enter a positive number minimum of 200.");
                 input.next(); // Clear invalid input
             }
         }
@@ -112,18 +113,34 @@ public class Main {
     }
 
     // Overloaded method to validate input based on an upper limit
-    private static int getValidInput(Scanner input, String prompt, int upperLimit) {
+    private static int getValidInput(Scanner input, String prompt,int limitType, int limit) {
         int value;
         while (true) {
             System.out.print(prompt);
-            if (input.hasNextInt()) {
-                value = input.nextInt();
-                if (value > 0 && value <= upperLimit) {
-                    return value;
+            if(limitType == 1){
+                if (input.hasNextInt()) {
+                    value = input.nextInt();
+
+                    if (value > 0 && value <= limit) {
+                        return value;
+                    }
                 }
+                input.nextLine(); // Clear invalid input
+                System.out.println("Invalid input. Please enter a positive integer less than " + limit + ".");
             }
-            input.nextLine(); // Clear invalid input
-            System.out.println("Invalid input. Please enter a positive integer less than " + upperLimit + ".");
+            else{
+                if (input.hasNextInt()) {
+                    value = input.nextInt();
+
+                    if (value >= limit) {
+                        return value;
+                    }
+                }
+                input.nextLine(); // Clear invalid input
+                System.out.println("Invalid input. Please enter a positive integer greater than " + limit + ".");
+            }
+
+
         }
     }
 
@@ -153,7 +170,7 @@ public class Main {
 
         Customer[] customers = new Customer[3]; // Creating array of customers and buy/remove tickets from ticket pool
         for (int i = 0; i < customers.length; i++) {
-            customers[i] = new Customer(i, ticketPool, 6, 5); //quantity is how many tickets 1 customer buy
+            customers[i] = new Customer(i, ticketPool, 6, 10); //quantity is how many tickets 1 customer buy
             Thread customerThread = new Thread(customers[i], "Customer ID-" + (i + 1));
             customerThread.start();
         }

@@ -5,19 +5,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Configuration {
-    private static int currentConfigId; // Static variable to track the configuration ID
     private int configId; // Instance variable for each configuration
+    private static int currentConfigId; // Static variable to track the configuration ID
+    private int maxTicketCapacity;
     private int totalTickets;
     private int ticketReleaseRate;
     private int customerRetrievalRate;
-    private int maxTicketCapacity;
 
-    public Configuration(int totalTickets, int ticketReleaseRate, int customerRetrievalRate, int maxTicketCapacity) {
+    public Configuration(int maxTicketCapacity, int totalTickets, int ticketReleaseRate, int customerRetrievalRate) {
         this.configId = loadCurrentConfigId();
+        this.maxTicketCapacity = maxTicketCapacity;
         this.totalTickets = totalTickets;
         this.ticketReleaseRate = ticketReleaseRate;
         this.customerRetrievalRate = customerRetrievalRate;
-        this.maxTicketCapacity = maxTicketCapacity;
     }
 
     // Getters
@@ -40,12 +40,13 @@ public class Configuration {
     public void saveConfiguration() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("config.txt", true))) { // Append mode
             writer.write("ConfigID: " + this.configId + "\n");
+            writer.write("MaxTicketCapacity: " + this.maxTicketCapacity + "\n");
             writer.write("TotalTickets: " + this.totalTickets + "\n");
             writer.write("TicketReleaseRate: " + this.ticketReleaseRate + "\n");
             writer.write("CustomerRetrievalRate: " + this.customerRetrievalRate + "\n");
-            writer.write("MaxTicketCapacity: " + this.maxTicketCapacity + "\n");
+
             writer.write("---\n"); // Separator for configurations
-            System.out.println("\nConfiguration saved successfully.");
+            System.out.println("\nConfiguration saved successfully."+"\n");
             // Increment and save the new Config ID
             saveCurrentConfigId(this.configId + 1);
 

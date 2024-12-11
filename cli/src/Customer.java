@@ -21,7 +21,7 @@ public class Customer implements Runnable{
         for (int i = 0; i < quantity; i++) {
             Ticket ticket = ticketPool.removeTicket(); // Call method to buyTickets
             try {
-                Thread.sleep(customerRetrivelRate * 1000); // Retrieving delay
+                Thread.sleep(customerRetrivelRate); // Retrieving delay
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

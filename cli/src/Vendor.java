@@ -25,7 +25,7 @@ public class Vendor implements Runnable{
         for (int i = 1; i <= totalTickets; i++) {
 
             if (ticketPool.getTicketCount() == maxTicketCapacity){
-                System.out.println("Maximum ticket capacity reached. Stopping the system.");
+                System.out.println("Maximum ticket capacity reached for "+vendorId+". Stopping the system.");
                 break; // Exit the loop
             }
 
@@ -33,7 +33,7 @@ public class Vendor implements Runnable{
             Ticket ticket = new Ticket(ticketId,"Event", new BigDecimal("1000"));
             ticketPool.addTicket(ticket);
             try {
-                Thread.sleep(ticketReleaseRate * 1000); // To convert to ms
+                Thread.sleep(ticketReleaseRate);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
