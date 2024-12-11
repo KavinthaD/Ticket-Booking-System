@@ -3,8 +3,10 @@ package com.ticketbookingsystem.configuration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.FileNotFoundException;
+
 @RestController
-@CrossOrigin(origins = "http://localhost:5173") // Allow requests from the frontend
+@CrossOrigin(origins = "http://localhost:5174") // Allow requests from the frontend
 @RequestMapping("/api/configurations")  // This is the base URL
 public class ConfigurationController {
 
@@ -28,7 +30,7 @@ public class ConfigurationController {
         try {
             configurationService.beginTicketFlow(config);
             return "Ticket flow started successfully!";
-        } catch (InterruptedException e) {
+        } catch (InterruptedException | FileNotFoundException e) {
             e.printStackTrace();
             return "Error while starting ticket flow!";
         }

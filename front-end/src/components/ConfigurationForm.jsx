@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TicketDataService from "../services/ticket.service";
 
-const ConfigurationForm = () => {
+const ConfigurationForm = ({ onSaveConfig }) => {
   // State for form fields
   const [config, setConfig] = useState({
     totalTickets: "",
@@ -25,11 +25,11 @@ const ConfigurationForm = () => {
     if (!config.totalTickets || config.totalTickets <= 0) {
       newErrors.totalTickets = "Total tickets must be a positive number and cannot be empty.";
     }
-    if (!config.ticketReleaseRate || config.ticketReleaseRate <= 0) {
+    if (!config.ticketReleaseRate || config.ticketReleaseRate < 200) {
       newErrors.ticketReleaseRate = "Ticket release rate must be greater than 200ms and cannot be empty.";
     }
-    if (!config.customerRetrievalRate || config.customerRetrievalRate <= 200) {
-      newErrors.customerRetrievalRate = "Customer retrieval rate must be greater than 200ms and cannot be empty.";
+    if (!config.customerRetrievalRate || config.customerRetrievalRate < 200) {
+      newErrors.customerRetrievalRate = "Customer retrieval rate atleast should be 200ms and cannot be empty.";
     }
     if (!config.maxTicketCapacity || config.maxTicketCapacity <= 0) {
       newErrors.maxTicketCapacity = "Maximum ticket capacity must be a positive number and cannot be empty.";
@@ -47,12 +47,13 @@ const ConfigurationForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    onSaveConfig(config); // Pass config to parent component
     if (!validate()) return; // Stop if validation fails
   
     try {
       // Call TicketDataService.create with form data
       const response = await TicketDataService.create(config);
-      alert("Configuration saved successfully: " + JSON.stringify(response.data));
+      alert("Configuration saved successfully: ");
     } catch (error) {
       console.error("Error saving configuration:", error);
       alert("Failed to save configuration. Check the backend.");

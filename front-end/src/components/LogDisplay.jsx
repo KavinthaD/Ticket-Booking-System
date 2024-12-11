@@ -38,7 +38,7 @@ const LogDisplay = ({ showLogs }) => {
   return (
     <div
       className="bg-black bg-opacity-80 rounded-md p-6 text-white overflow-y-auto"
-      style={{ maxHeight: "10000px" }}
+      style={{ maxHeight: "300px", width: "100%", overflow: "auto" }}
     >
       <h1 className="mb-2 text-2xl">Logs</h1>
       {error ? (

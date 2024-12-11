@@ -1,15 +1,21 @@
 package com.ticketbookingsystem.configuration;
 
+import com.ticketbookingsystem.controller.LoggingController;
 import com.ticketbookingsystem.model.Customer;
 import com.ticketbookingsystem.model.TicketPool;
 import com.ticketbookingsystem.model.Vendor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 @Service
 public class ConfigurationService {
+
+    @Autowired
+    private LoggingController loggingController;  // Inject LoggingController
+
     @Autowired
     private ConfigurationRepository configurationRepository;
 
@@ -27,7 +33,9 @@ public class ConfigurationService {
         return configurationRepository.findById(id).orElseThrow();
     }
 
-    public void beginTicketFlow(Configuration config) throws InterruptedException {
+    public void beginTicketFlow(Configuration config) throws InterruptedException, FileNotFoundException {
+        System.out.println("\nBegin ticket flow");
+        loggingController.startLogging();  // Start logging
         // Create the TicketPool and other logic
         TicketPool ticketPool = new TicketPool(config.getTotalTickets()); // create total ticket capacity and ticket queue
 
