@@ -160,9 +160,9 @@ public class Main {
 
         TicketPool ticketPool = new TicketPool(config.getTotalTickets()); //create total ticket capacity and ticket queue
 
-        Vendor[] vendors = new Vendor[2]; // Creating array of vendors and add tickets to ticket pool
+        Vendor[] vendors = new Vendor[4]; // Creating array of vendors and add tickets to ticket pool
         for (int i = 0; i < vendors.length; i++) {
-            vendors[i] = new Vendor(config.getTotalTickets(), config.getTicketReleaseRate(), ticketPool, i, config.getMaxTicketCapacity());
+            vendors[i] = new Vendor(config.getMaxTicketCapacity(),config.getTotalTickets(), config.getTicketReleaseRate(), ticketPool, i);
 
             Thread vendorThread = new Thread(vendors[i], "Vendor ID-" + (i + 1)); //
             vendorThread.start();

@@ -3,9 +3,11 @@ import java.math.BigDecimal;
 public class Ticket {
     private String ticketId;
     private String eventName;
-    private BigDecimal ticketPrice;
+    private double ticketPrice;
 
-    public Ticket(String ticketId, String eventName, BigDecimal ticketPrice) {
+
+
+    public Ticket(String ticketId, String eventName, double ticketPrice) {
         this.ticketId = ticketId;
         this.eventName = eventName;
         this.ticketPrice = ticketPrice;
@@ -27,11 +29,11 @@ public class Ticket {
         this.eventName = eventName;
     }
 
-    public BigDecimal getTicketPrice() {
+    public double getTicketPrice() {
         return ticketPrice;
     }
 
-    public void setTicketPrice(BigDecimal ticketPrice) {
+    public void setTicketPrice(double ticketPrice) {
         this.ticketPrice = ticketPrice;
     }
 

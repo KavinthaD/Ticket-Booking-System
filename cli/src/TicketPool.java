@@ -1,12 +1,15 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 
 public class TicketPool {
     private int totalTickets;
     private Queue<Ticket> ticketQueue;
     public int ticketCount = 0;
+    private Map<Integer, Integer> vendorTicketsMap;
 
     //creating timestamp
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
@@ -14,6 +17,7 @@ public class TicketPool {
     public TicketPool(int totalTickets) {
         this.totalTickets = totalTickets;
         this.ticketQueue = new LinkedList<>();
+        this.vendorTicketsMap = new HashMap<>();
     }
 
     public int getTicketCount() {
@@ -22,7 +26,6 @@ public class TicketPool {
 
     // Vendor who is the Producer will call the addTicket() method
     public synchronized void addTicket(Ticket ticket){
-
         while (ticketQueue.size() >= totalTickets){
             try {
                 wait();
@@ -36,7 +39,10 @@ public class TicketPool {
         ticketCount++;
         notifyAll(); // Notify all the waiting threads
         String timestampForAdd = LocalDateTime.now().format(formatter);
-        System.out.println("[" + timestampForAdd + "] " + "Ticket added by - " + Thread.currentThread().getName() + " - current size is " + ticketQueue.size()+" - ticket ID "+ticket.getTicketId());
+        System.out.println("[" + timestampForAdd + "] "
+                + "Ticket added by - " + Thread.currentThread().getName()
+                + " - current size is " + ticketQueue.size()
+                + " - Ticket info - " + ticket);
     }
 
     // Customer who is the Consumer will call the buyTicket() method
@@ -52,7 +58,10 @@ public class TicketPool {
         Ticket ticket = ticketQueue.poll();
         notifyAll();
         String timestamp = LocalDateTime.now().format(formatter);
-        System.out.println("[" + timestamp + "] " + "Ticket bought by - " + Thread.currentThread().getName() + " - current size is - " + ticketQueue.size() + " - Ticket is - " + ticket);
+        System.out.println("[" + timestamp + "] "
+                + "Ticket bought by - " + Thread.currentThread().getName()
+                + " - current size is - " + ticketQueue.size()
+                + " - Ticket info - " + ticket);
         return ticket;
     }
 }

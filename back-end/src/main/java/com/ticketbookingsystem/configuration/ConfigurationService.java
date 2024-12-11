@@ -39,7 +39,7 @@ public class ConfigurationService {
         // Create the TicketPool and other logic
         TicketPool ticketPool = new TicketPool(config.getTotalTickets()); // create total ticket capacity and ticket queue
 
-        Vendor[] vendors = new Vendor[2]; // Create vendors and add tickets to ticket pool
+        Vendor[] vendors = new Vendor[4]; // Create vendors and add tickets to ticket pool
         for (int i = 0; i < vendors.length; i++) {
             vendors[i] = new Vendor(config.getTotalTickets(), config.getTicketReleaseRate(), ticketPool, i, config.getMaxTicketCapacity());
 

@@ -33,8 +33,11 @@ const LogDisplay = ({ showLogs }) => {
     return () => clearInterval(interval); // Cleanup interval on unmount or when `showLogs` changes
   }, [showLogs]);
 
-  if (!showLogs) return null;
-
+  if (!showLogs) return (
+    <div>
+      <h1 className="mb-2 text-2xl">Logs</h1>
+      <p>No logs to show</p>
+</div>);
   return (
     <div
       className="bg-black bg-opacity-80 rounded-md p-6 text-white overflow-y-auto"

@@ -68,6 +68,7 @@ const ConfigurationForm = ({ onSaveConfig }) => {
       <form onSubmit={handleSubmit}>
         <div className="my-3">
           <label className="mr-3">Total Tickets:</label>
+          <br/>
           <input className="bg-white bg-opacity-80 rounded-sm text-black"
             type="number"
             name="totalTickets"
@@ -79,6 +80,7 @@ const ConfigurationForm = ({ onSaveConfig }) => {
 
         <div className="my-3">
           <label className="mr-3">Ticket Release Rate (ms):</label>
+          <br/>
           <input className="bg-white bg-opacity-80 rounded-sm text-black"
             type="number"
             name="ticketReleaseRate"
@@ -90,6 +92,7 @@ const ConfigurationForm = ({ onSaveConfig }) => {
 
         <div className="my-3">
           <label className="mr-3">Customer Retrieval Rate (ms):</label>
+          <br/>
           <input className="bg-white bg-opacity-80 rounded-sm text-black"
             type="number"
             name="customerRetrievalRate"
@@ -101,6 +104,7 @@ const ConfigurationForm = ({ onSaveConfig }) => {
 
         <div className="my-3">
           <label className="mr-3">Maximum Ticket Capacity:</label>
+          <br/>
           <input className="bg-white bg-opacity-80 rounded-sm text-black"
             type="number"
             name="maxTicketCapacity"

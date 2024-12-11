@@ -78,21 +78,21 @@ public class Configuration {
         List<Configuration> configurations = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader("config.txt"))) {
             String line;
-            int configId = 0, totalTickets = 0, ticketReleaseRate = 0, customerRetrievalRate = 0, maxTicketCapacity = 0;
+            int configId = 0,maxTicketCapacity = 0, totalTickets = 0, ticketReleaseRate = 0, customerRetrievalRate = 0;
 
             while ((line = reader.readLine()) != null) {
                 if (line.startsWith("ConfigID: ")) {
                     configId = Integer.parseInt(line.split(": ")[1]);
-                } else if (line.startsWith("TotalTickets: ")) {
+                }else if (line.startsWith("MaxTicketCapacity: ")) {
+                    maxTicketCapacity = Integer.parseInt(line.split(": ")[1]);
+                }else if (line.startsWith("TotalTickets: ")) {
                     totalTickets = Integer.parseInt(line.split(": ")[1]);
                 } else if (line.startsWith("TicketReleaseRate: ")) {
                     ticketReleaseRate = Integer.parseInt(line.split(": ")[1]);
                 } else if (line.startsWith("CustomerRetrievalRate: ")) {
                     customerRetrievalRate = Integer.parseInt(line.split(": ")[1]);
-                } else if (line.startsWith("MaxTicketCapacity: ")) {
-                    maxTicketCapacity = Integer.parseInt(line.split(": ")[1]);
-                } else if (line.equals("---")) { // End of one configuration
-                    configurations.add(new Configuration(totalTickets, ticketReleaseRate, customerRetrievalRate, maxTicketCapacity));
+                }  else if (line.equals("---")) { // End of one configuration
+                    configurations.add(new Configuration(maxTicketCapacity,totalTickets, ticketReleaseRate, customerRetrievalRate));
                     configurations.get(configurations.size() - 1).configId = configId; // Assign config ID
                 }
             }
@@ -106,10 +106,11 @@ public class Configuration {
     @Override
     public String toString() {
         return "ConfigID: " + configId + "\n" +
+                "MaxTicketCapacity: " + maxTicketCapacity+ "\n" +
                 "TotalTickets: " + totalTickets + "\n" +
                 "TicketReleaseRate: " + ticketReleaseRate + "\n" +
-                "CustomerRetrievalRate: " + customerRetrievalRate + "\n" +
-                "MaxTicketCapacity: " + maxTicketCapacity;
+                "CustomerRetrievalRate: " + customerRetrievalRate + "\n" ;
+
     }
 
     public int getConfigId() {

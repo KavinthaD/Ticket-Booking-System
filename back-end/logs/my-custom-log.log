@@ -1,47 +1,50 @@
-[2024-12-10 21:50:29.970] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t1
-[2024-12-10 21:50:29.973] Ticket bought by - Customer ID-3 - current size is - 0 - Ticket is - Ticket{ticketId=v1t1, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:29.974] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t1
-[2024-12-10 21:50:29.974] Ticket bought by - Customer ID-1 - current size is - 0 - Ticket is - Ticket{ticketId=v2t1, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:30.173] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t2
-[2024-12-10 21:50:30.173] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket{ticketId=v1t2, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:30.174] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t2
-[2024-12-10 21:50:30.174] Ticket bought by - Customer ID-1 - current size is - 0 - Ticket is - Ticket{ticketId=v2t2, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:30.375] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t3
-[2024-12-10 21:50:30.375] Ticket bought by - Customer ID-3 - current size is - 0 - Ticket is - Ticket{ticketId=v1t3, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:30.375] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t3
-[2024-12-10 21:50:30.375] Ticket bought by - Customer ID-1 - current size is - 0 - Ticket is - Ticket{ticketId=v2t3, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:30.576] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t4
-[2024-12-10 21:50:30.576] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket{ticketId=v1t4, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:30.576] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t4
-[2024-12-10 21:50:30.576] Ticket bought by - Customer ID-1 - current size is - 0 - Ticket is - Ticket{ticketId=v2t4, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:30.777] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t5
-[2024-12-10 21:50:30.777] Ticket bought by - Customer ID-3 - current size is - 0 - Ticket is - Ticket{ticketId=v2t5, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:30.777] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t5
-[2024-12-10 21:50:30.777] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket{ticketId=v1t5, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:30.978] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t6
-[2024-12-10 21:50:30.978] Ticket bought by - Customer ID-1 - current size is - 0 - Ticket is - Ticket{ticketId=v2t6, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:30.978] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t6
-[2024-12-10 21:50:30.978] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket{ticketId=v1t6, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:31.180] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t7
-[2024-12-10 21:50:31.180] Ticket bought by - Customer ID-3 - current size is - 0 - Ticket is - Ticket{ticketId=v1t7, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:31.180] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t7
-[2024-12-10 21:50:31.180] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket{ticketId=v2t7, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:31.381] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t8
-[2024-12-10 21:50:31.381] Ticket bought by - Customer ID-3 - current size is - 0 - Ticket is - Ticket{ticketId=v1t8, eventName='Event', ticketPrice=1000}
-[2024-12-10 21:50:31.381] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t8
-[2024-12-10 21:50:31.582] Ticket added by - Vendor ID-2 - current size is 2 - ticket ID v2t9
-[2024-12-10 21:50:31.582] Ticket added by - Vendor ID-1 - current size is 3 - ticket ID v1t9
-[2024-12-10 21:50:31.783] Ticket added by - Vendor ID-2 - current size is 4 - ticket ID v2t10
-[2024-12-10 21:50:31.784] Ticket added by - Vendor ID-1 - current size is 5 - ticket ID v1t10
-[2024-12-10 21:50:31.983] Ticket added by - Vendor ID-2 - current size is 6 - ticket ID v2t11
-[2024-12-10 21:50:31.984] Ticket added by - Vendor ID-1 - current size is 7 - ticket ID v1t11
-[2024-12-10 21:50:32.184] Ticket added by - Vendor ID-2 - current size is 8 - ticket ID v2t12
-[2024-12-10 21:50:32.185] Ticket added by - Vendor ID-1 - current size is 9 - ticket ID v1t12
-[2024-12-10 21:50:32.385] Ticket added by - Vendor ID-2 - current size is 10 - ticket ID v2t13
-[2024-12-10 21:50:32.387] Ticket added by - Vendor ID-1 - current size is 11 - ticket ID v1t13
-[2024-12-10 21:50:32.586] Ticket added by - Vendor ID-2 - current size is 12 - ticket ID v2t14
-[2024-12-10 21:50:32.588] Ticket added by - Vendor ID-1 - current size is 13 - ticket ID v1t14
-[2024-12-10 21:50:32.787] Ticket added by - Vendor ID-2 - current size is 14 - ticket ID v2t15
-[2024-12-10 21:50:32.790] Ticket added by - Vendor ID-1 - current size is 15 - ticket ID v1t15
-Maximum ticket capacity reached. Stopping the system.
-Maximum ticket capacity reached. Stopping the system.
+[2024-12-11 17:20:59.610] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t1
+[2024-12-11 17:20:59.610] Ticket added by - Vendor ID-4 - current size is 2 - ticket ID v4t1
+[2024-12-11 17:20:59.610] Ticket added by - Vendor ID-3 - current size is 3 - ticket ID v3t1
+[2024-12-11 17:20:59.610] Ticket added by - Vendor ID-2 - current size is 4 - ticket ID v2t1
+[2024-12-11 17:20:59.610] Ticket bought by - Customer ID-1 - current size is - 3 - Ticket is - Ticket{ticketId=v1t1, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:20:59.611] Ticket bought by - Customer ID-2 - current size is - 2 - Ticket is - Ticket{ticketId=v4t1, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:20:59.611] Ticket bought by - Customer ID-3 - current size is - 1 - Ticket is - Ticket{ticketId=v3t1, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:20:59.617] Ticket bought by - Customer ID-3 - current size is - 0 - Ticket is - Ticket{ticketId=v2t1, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:20:59.812] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t2
+[2024-12-11 17:20:59.812] Ticket bought by - Customer ID-1 - current size is - 0 - Ticket is - Ticket{ticketId=v1t2, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:20:59.812] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t2
+[2024-12-11 17:20:59.812] Ticket added by - Vendor ID-3 - current size is 2 - ticket ID v3t2
+[2024-12-11 17:20:59.812] Ticket added by - Vendor ID-4 - current size is 3 - ticket ID v4t2
+[2024-12-11 17:20:59.812] Ticket bought by - Customer ID-3 - current size is - 2 - Ticket is - Ticket{ticketId=v2t2, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:20:59.812] Ticket bought by - Customer ID-2 - current size is - 1 - Ticket is - Ticket{ticketId=v3t2, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:20:59.820] Ticket bought by - Customer ID-3 - current size is - 0 - Ticket is - Ticket{ticketId=v4t2, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:21:00.013] Ticket added by - Vendor ID-2 - current size is 1 - ticket ID v2t3
+[2024-12-11 17:21:00.013] Ticket added by - Vendor ID-3 - current size is 2 - ticket ID v3t3
+[2024-12-11 17:21:00.013] Ticket bought by - Customer ID-2 - current size is - 1 - Ticket is - Ticket{ticketId=v2t3, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:21:00.013] Ticket added by - Vendor ID-1 - current size is 2 - ticket ID v1t3
+[2024-12-11 17:21:00.013] Ticket added by - Vendor ID-4 - current size is 3 - ticket ID v4t3
+[2024-12-11 17:21:00.013] Ticket bought by - Customer ID-3 - current size is - 2 - Ticket is - Ticket{ticketId=v3t3, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:21:00.013] Ticket bought by - Customer ID-1 - current size is - 1 - Ticket is - Ticket{ticketId=v1t3, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:21:00.020] Ticket bought by - Customer ID-2 - current size is - 0 - Ticket is - Ticket{ticketId=v4t3, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:21:00.214] Ticket added by - Vendor ID-3 - current size is 1 - ticket ID v3t4
+[2024-12-11 17:21:00.214] Ticket bought by - Customer ID-1 - current size is - 0 - Ticket is - Ticket{ticketId=v3t4, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:21:00.214] Ticket added by - Vendor ID-1 - current size is 1 - ticket ID v1t4
+[2024-12-11 17:21:00.214] Ticket added by - Vendor ID-4 - current size is 2 - ticket ID v4t4
+[2024-12-11 17:21:00.214] Ticket added by - Vendor ID-2 - current size is 3 - ticket ID v2t4
+[2024-12-11 17:21:00.214] Ticket bought by - Customer ID-2 - current size is - 2 - Ticket is - Ticket{ticketId=v1t4, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:21:00.220] Ticket bought by - Customer ID-1 - current size is - 1 - Ticket is - Ticket{ticketId=v4t4, eventName='Event', ticketPrice=1000}
+[2024-12-11 17:21:00.414] Ticket added by - Vendor ID-4 - current size is 2 - ticket ID v4t5
+[2024-12-11 17:21:00.414] Ticket added by - Vendor ID-2 - current size is 3 - ticket ID v2t5
+[2024-12-11 17:21:00.414] Ticket added by - Vendor ID-1 - current size is 4 - ticket ID v1t5
+[2024-12-11 17:21:00.414] Ticket added by - Vendor ID-3 - current size is 5 - ticket ID v3t5
+[2024-12-11 17:21:00.615] Ticket added by - Vendor ID-2 - current size is 6 - ticket ID v2t6
+[2024-12-11 17:21:00.615] Ticket added by - Vendor ID-4 - current size is 7 - ticket ID v4t6
+[2024-12-11 17:21:00.616] Ticket added by - Vendor ID-3 - current size is 8 - ticket ID v3t6
+[2024-12-11 17:21:00.616] Ticket added by - Vendor ID-1 - current size is 9 - ticket ID v1t6
+[2024-12-11 17:21:00.815] Ticket added by - Vendor ID-2 - current size is 10 - ticket ID v2t7
+[2024-12-11 17:21:00.815] Ticket added by - Vendor ID-4 - current size is 11 - ticket ID v4t7
+[2024-12-11 17:21:00.816] Ticket added by - Vendor ID-3 - current size is 12 - ticket ID v3t7
+[2024-12-11 17:21:00.816] Ticket added by - Vendor ID-1 - current size is 13 - ticket ID v1t7
+[2024-12-11 17:21:01.016] Ticket added by - Vendor ID-4 - current size is 14 - ticket ID v4t8
+[2024-12-11 17:21:01.016] Ticket added by - Vendor ID-2 - current size is 15 - ticket ID v2t8
+[2024-12-11 17:21:01.017] Ticket added by - Vendor ID-3 - current size is 16 - ticket ID v3t8
+[2024-12-11 17:21:01.017] Ticket added by - Vendor ID-1 - current size is 17 - ticket ID v1t8
+[2024-12-11 17:21:01.216] Ticket added by - Vendor ID-4 - current size is 18 - ticket ID v4t9
+[2024-12-11 17:21:01.216] Ticket added by - Vendor ID-2 - current size is 19 - ticket ID v2t9
+[2024-12-11 17:21:01.217] Ticket added by - Vendor ID-3 - current size is 20 - ticket ID v3t9

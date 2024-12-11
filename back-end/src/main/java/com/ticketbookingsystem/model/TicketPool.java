@@ -38,7 +38,10 @@ public class TicketPool {
         ticketCount++;
         notifyAll(); // Notify all the waiting threads
         String timestampForAdd = LocalDateTime.now().format(formatter);
-        System.out.println("[" + timestampForAdd + "] " + "Ticket added by - " + Thread.currentThread().getName() + " - current size is " + ticketQueue.size()+" - ticket ID "+ticket.getTicketId());
+        System.out.println("[" + timestampForAdd + "] "
+                + "Ticket added by - " + Thread.currentThread().getName()
+                + " - current size is " + ticketQueue.size()
+                +" - ticket ID "+ticket.getTicketId());
     }
 
     // Customer who is the Consumer will call the buyTicket() method
@@ -54,7 +57,12 @@ public class TicketPool {
         Ticket ticket = ticketQueue.poll();
         notifyAll();
         String timestamp = LocalDateTime.now().format(formatter);
-        System.out.println("[" + timestamp + "] " + "Ticket bought by - " + Thread.currentThread().getName() + " - current size is - " + ticketQueue.size() + " - Ticket is - " + ticket);
+        System.out.println("[" + timestamp + "] "
+                + "Ticket bought by - "
+                + Thread.currentThread().getName()
+                + " - current size is - "
+                + ticketQueue.size() + " - Ticket is - "
+                + ticket);
         return ticket;
     }
 }

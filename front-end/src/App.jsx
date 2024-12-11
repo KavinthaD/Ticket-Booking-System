@@ -4,6 +4,8 @@ import TicketDisplay from "./components/TicketDisplay";
 import LogDisplay from "./components/LogDisplay";
 import ControlPanel from "./components/ControlPanel";
 import logService from "./services/log.service"; // Import the log service
+import TicketLineChart from "./components/TicketLineChart";
+import './app.css'; // Import the CSS file
 
 function App() {
   const [showLogs, setShowLogs] = useState(false);
@@ -44,27 +46,32 @@ function App() {
   }, [showLogs]);
 
   return (
-    <div className="flex flex-col h-screen" style={{ backgroundColor: "#262626" }}>
+    <div className="app-container">
       {/* Control Panel at the top */}
-      <div className="flex justify-center py-4 shadow-md" style={{ backgroundColor: "#4a4949" }}>
+      <div className="control-panel">
         <ControlPanel onStart={handleStart} config={config} />
       </div>
 
       {/* Main content area */}
-      <div className="flex flex-1 w-full">
+      <div className="main-content">
         {/* ConfigurationForm on the left */}
-        <div className="flex-1 p-4">
+        <div className="configuration-form">
           <ConfigurationForm onSaveConfig={handleSaveConfig} />
         </div>
 
-        {/* TicketDisplay on the right */}
-        <div className="flex-1 p-4">
+        {/* TicketDisplay on the middle */}
+        <div className="ticket-display">
           <TicketDisplay logs={logs} />
+        </div>
+
+        {/* Chart on the right */}
+        <div className="chart-display">
+          <TicketLineChart logs={logs}/>
         </div>
       </div>
 
       {/* LogDisplay at the bottom */}
-      <div className="w-full bg-black text-white p-4">
+      <div className="log-display">
         <LogDisplay showLogs={showLogs} />
       </div>
     </div>

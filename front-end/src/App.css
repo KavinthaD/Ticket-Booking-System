@@ -1,0 +1,55 @@
+/* app.css */
+
+/* Background color for the entire app */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #262626;
+  }
+  
+  /* Styles for the control panel */
+  .control-panel {
+    
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #4a4949;
+  }
+  
+  /* Main content area styles */
+  .main-content {
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    
+  }
+  
+  /* Styles for the left section (ConfigurationForm) */
+  .configuration-form {
+    flex: 0.26;
+    padding: 1rem;
+  }
+  
+  /* Styles for the right section (TicketDisplay) */
+  .ticket-display {
+    flex: 0.3;
+    padding: 1rem;
+    height: 0vh;
+  }
+
+  .chart-display {
+    flex: 0.40;
+    padding: 1rem;
+  }
+  
+  /* LogDisplay styles */
+  .log-display {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+  }
+  

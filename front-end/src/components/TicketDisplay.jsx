@@ -64,9 +64,9 @@ const TicketDisplay = ({ logs }) => {
       <table className="table-auto w-full text-left border-collapse">
         <thead>
           <tr className="border-b border-gray-700">
-            <th className="px-4 py-2 w-[150px]">Vendor ID</th>
-            <th className="px-4 py-2 w-[200px]">Vendor Name</th>
-            <th className="px-4 py-2 w-[250px]">Available Tickets</th>
+            <th className="px-4 py-2 ">Vendor ID</th>
+            <th className="px-4 py-2 ">Vendor Name</th>
+            <th className="px-4 py-2 ">Available Tickets</th>
           </tr>
         </thead>
         <tbody>
