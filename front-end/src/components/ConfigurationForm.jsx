@@ -20,31 +20,36 @@ const ConfigurationForm = ({ onSaveConfig }) => {
   };
 
   // Validate form inputs
-  const validate = () => {
-    const newErrors = {};
-    if (!config.maxTicketCapacity || config.maxTicketCapacity <= 0) {
-      newErrors.maxTicketCapacity = "Maximum ticket capacity must be a positive number and cannot be empty.";
-    }
-    if (!config.totalTickets || config.totalTickets <= 0) {
-      newErrors.totalTickets = "Total tickets must be a positive number and cannot be empty.";
-    }
-    if(config.totalTickets > config.maxTicketCapacity){
-      newErrors.totalTickets = "Total tickets cannot exceed max ticket capacity.";
-    }
+const validate = () => {
+  const newErrors = {};
 
-    if (!config.ticketReleaseRate || config.ticketReleaseRate < 200) {
-      newErrors.ticketReleaseRate = "Ticket release rate must be greater than 200ms and cannot be empty.";
-    }
-    if (!config.customerRetrievalRate || config.customerRetrievalRate < 200) {
-      newErrors.customerRetrievalRate = "Customer retrieval rate atleast should be 200ms and cannot be empty.";
-    }
-   
+  // Validate maxTicketCapacity
+  if (!config.maxTicketCapacity || config.maxTicketCapacity <= 0) {
+    newErrors.maxTicketCapacity = "Maximum ticket capacity must be a positive number and cannot be empty.";
+  }
 
-    
+  // Validate totalTickets
+  if (!config.totalTickets || config.totalTickets <= 0) {
+    newErrors.totalTickets = "Total tickets must be a positive number and cannot be empty.";
+  }
+  if(parseInt(config.totalTickets, 10) > parseInt(config.maxTicketCapacity, 10)){
+    // Only check this if maxTicketCapacity is valid
+    newErrors.totalTickets = "Total tickets cannot exceed max ticket capacity.";
+  }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+  // Validate ticketReleaseRate
+  if (!config.ticketReleaseRate || config.ticketReleaseRate < 200) {
+    newErrors.ticketReleaseRate = "Ticket release rate must be greater than or equal to 200ms and cannot be empty.";
+  }
+
+  // Validate customerRetrievalRate
+  if (!config.customerRetrievalRate || config.customerRetrievalRate < 200) {
+    newErrors.customerRetrievalRate = "Customer retrieval rate must be greater than or equal to 200ms and cannot be empty.";
+  }
+
+  setErrors(newErrors);
+  return Object.keys(newErrors).length === 0; // Return true if no errors
+};
 
   
 
@@ -56,7 +61,7 @@ const ConfigurationForm = ({ onSaveConfig }) => {
     try {
       // Call TicketDataService.create with form data
       const response = await TicketDataService.create(config);
-      alert("Configuration saved successfully: ");
+      alert("Configuration saved successfully. ");
     } catch (error) {
       console.error("Error saving configuration:", error);
       alert("Failed to save configuration. Check the backend.");

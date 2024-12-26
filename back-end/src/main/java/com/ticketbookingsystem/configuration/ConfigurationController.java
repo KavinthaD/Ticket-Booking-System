@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.FileNotFoundException;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5174") // Allow requests from the frontend
+@CrossOrigin(origins = "http://localhost:5173") // Allow requests from the frontend
 @RequestMapping("/api/configurations")  // This is the base URL
 public class ConfigurationController {
 

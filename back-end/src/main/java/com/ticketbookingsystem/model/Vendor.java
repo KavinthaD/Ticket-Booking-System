@@ -28,7 +28,8 @@ public class Vendor implements Runnable{
     public void run() {
         for (int i = 1; i <= totalTickets; i++) {
 
-            if (ticketPool.getTicketCount() == maxTicketCapacity){
+            int  count= ticketPool.getTicketCount()*4;
+            if (count == maxTicketCapacity){
                 System.out.println("Maximum ticket capacity reached for vendor"+(vendorId+1)+". Stopping the system.");
                 break; // Exit the loop
             }
@@ -43,7 +44,7 @@ public class Vendor implements Runnable{
                 price = 2000;
             }else if ((vendorId+1) == 2 ) {
                 event = "Movie: Despicable Me 4";
-                price = 2000;
+                price = 2500;
             }else if ((vendorId+1) == 3 ){
                 event = "Cricket Match: Sri Lanka vs India";
                 price = 1000;

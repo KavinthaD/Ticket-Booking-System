@@ -37,12 +37,15 @@ public class TicketPool {
 
         this.ticketQueue.add(ticket);
         ticketCount++;
+
+
         notifyAll(); // Notify all the waiting threads
         String timestampForAdd = LocalDateTime.now().format(formatter);
         System.out.println("[" + timestampForAdd + "] "
                 + "Ticket added by - " + Thread.currentThread().getName()
                 + " - current size is " + ticketQueue.size()
                 + " - Ticket info - " + ticket);
+
     }
 
     // Customer who is the Consumer will call the buyTicket() method
@@ -57,6 +60,7 @@ public class TicketPool {
 
         Ticket ticket = ticketQueue.poll();
         notifyAll();
+
         String timestamp = LocalDateTime.now().format(formatter);
         System.out.println("[" + timestamp + "] "
                 + "Ticket bought by - " + Thread.currentThread().getName()

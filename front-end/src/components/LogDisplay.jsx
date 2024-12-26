@@ -23,7 +23,7 @@ const LogDisplay = ({ showLogs }) => {
     if (showLogs) {
       // Fetch logs immediately and start polling
       fetchLogs();
-      interval = setInterval(fetchLogs, 2000); // Poll logs every 2 seconds
+      interval = setInterval(fetchLogs, 1000); // Poll logs every 2 seconds
     } else {
       // Clear logs and stop polling when system is stopped
       setLogs([]);

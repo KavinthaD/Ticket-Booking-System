@@ -47,37 +47,54 @@ const TicketLineChart = ({ logs }) => {
   useEffect(() => {
     if (!logs || logs.length === 0) return;
 
-    const vendorData = {}; // Object to store data for each vendor
+    const vendorData = {}; // Object to store revenue data for each vendor
+    let lastTimestamp = 0; // To track the last timestamp for each log entry
 
     // Iterate over the logs and process each one
     logs.forEach((log, index) => {
-      const time = `${index * 1}s`; // Assume each log is recorded at 5-second intervals
+      let timestamp = 0; // Default to 0 if no valid timestamp found
 
-      // Parse "Ticket bought" logs
+      // Parse "Ticket bought" logs for vendor ID and ticket price
       const ticketBoughtMatch = log.match(
-        /Ticket bought by - Customer ID-\d+ - current size is - \d+ - Ticket is - Ticket\{ticketId=(v\d)t(\d+),/
+        /Ticket bought by - Customer ID-\d+ - .*?Ticket\{ticketId=(v\d+)t\d+,.*?ticketPrice=(\d+\.\d+)/
       );
-
       if (ticketBoughtMatch) {
-        const vendorId = parseInt(ticketBoughtMatch[1].slice(1), 10); // Extract vendor ID (e.g., "v1" -> 1)
-        const ticketCount = parseInt(ticketBoughtMatch[2], 10); // Extract ticket number (e.g., "t4" -> 4)
+        const vendorId = parseInt(ticketBoughtMatch[1].slice(1), 10); // Extract vendor ID (e.g., "v2" -> 2)
+        const ticketPrice = parseFloat(ticketBoughtMatch[2]); // Extract ticket price
 
-        // If vendor data doesn't exist, create it
+        // If this is the first log or the time hasn't been set, use lastTimestamp + 1 (to ensure incremental time)
+        timestamp = lastTimestamp + 1;
+
+        // Initialize vendor data if not already initialized
         if (!vendorData[vendorId]) {
-          vendorData[vendorId] = { timestamps: [], ticketSales: [] };
+          vendorData[vendorId] = { timestamps: [], revenue: [0] };
         }
 
-        // Set the ticket count for the vendor (just set the sales to the current ticket count)
-        vendorData[vendorId].timestamps.push(time);
-        vendorData[vendorId].ticketSales.push(ticketCount); // Set the sales as per the `tX` value
+        // Accumulate revenue for the vendor
+        const previousRevenue =
+          vendorData[vendorId].revenue[vendorData[vendorId].revenue.length - 1] || 0;
+        const newRevenue = previousRevenue + ticketPrice;
+
+        vendorData[vendorId].timestamps.push(timestamp);
+        vendorData[vendorId].revenue.push(newRevenue);
+
+        // Update lastTimestamp
+        lastTimestamp = timestamp;
       }
     });
 
     // Format data for the chart
-    const timestamps = Object.values(vendorData)[0]?.timestamps || [];
+    const allTimestamps = [];
+    Object.values(vendorData).forEach((data) => {
+      allTimestamps.push(...data.timestamps);
+    });
+
+    // Ensure all timestamps are unique and sorted
+    const timestamps = [...new Set(allTimestamps)].sort((a, b) => a - b);
+
     const datasets = Object.entries(vendorData).map(([vendorId, data]) => ({
       label: `Vendor ${vendorId}`,
-      data: data.ticketSales,
+      data: data.revenue,
       borderColor: getColorForVendor(vendorId), // Use a color from the list
       backgroundColor: getColorForVendor(vendorId), // Use the same color for background
       tension: 0.3,
@@ -99,10 +116,6 @@ const TicketLineChart = ({ logs }) => {
       legend: {
         position: "top",
       },
-      title: {
-        display: true,
-        text: "Vendor Ticket Sales Over Time",
-      },
     },
     scales: {
       x: {
@@ -110,11 +123,15 @@ const TicketLineChart = ({ logs }) => {
           display: true,
           text: "Time (seconds)",
         },
+        ticks: {
+          autoSkip: false,
+          maxTicksLimit: 20, // Limit the number of x-axis ticks for better spacing
+        },
       },
       y: {
         title: {
           display: true,
-          text: "Tickets Sold",
+          text: "Revenue (in currency)",
         },
         beginAtZero: true,
       },
@@ -125,7 +142,7 @@ const TicketLineChart = ({ logs }) => {
     <div className="bg-black bg-opacity-80 rounded-md p-6 text-white">
       {chartData ? (
         <>
-          <h1 className="text-2xl font-bold mb-4 text-center">Vendor Ticket Sales Chart</h1>
+          <h1 className="text-2xl font-bold mb-4 text-center">Vendor Ticket Revenue Chart</h1>
           <Line data={chartData} options={options} />
         </>
       ) : (

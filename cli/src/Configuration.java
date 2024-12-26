@@ -33,9 +33,8 @@ public class Configuration {
         return customerRetrievalRate;
     }
 
-    public int getMaxTicketCapacity() {
-        return maxTicketCapacity;
-    }
+    public int getMaxTicketCapacity() {return maxTicketCapacity;}
+
     // Method to save the configuration to a text file
     public void saveConfiguration() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("config.txt", true))) { // Append mode
@@ -55,12 +54,13 @@ public class Configuration {
         }
     }
 
+    //load the Config ID from config_id.txt
     private static int loadCurrentConfigId() {
         try (BufferedReader reader = new BufferedReader(new FileReader("config_id.txt"))) {
             return Integer.parseInt(reader.readLine());
         } catch (IOException | NumberFormatException e) {
             System.out.println("Error reading config ID file. Defaulting to 1.");
-            return 1; // Default to 1 if the file is missing or corrupted
+            return 1; // Default configID to 1 if the file is missing or corrupted
         }
     }
 
@@ -80,6 +80,7 @@ public class Configuration {
             String line;
             int configId = 0,maxTicketCapacity = 0, totalTickets = 0, ticketReleaseRate = 0, customerRetrievalRate = 0;
 
+            //read all lines until no lines left to read
             while ((line = reader.readLine()) != null) {
                 if (line.startsWith("ConfigID: ")) {
                     configId = Integer.parseInt(line.split(": ")[1]);
@@ -92,6 +93,8 @@ public class Configuration {
                 } else if (line.startsWith("CustomerRetrievalRate: ")) {
                     customerRetrievalRate = Integer.parseInt(line.split(": ")[1]);
                 }  else if (line.equals("---")) { // End of one configuration
+
+                    //create configuration object
                     configurations.add(new Configuration(maxTicketCapacity,totalTickets, ticketReleaseRate, customerRetrievalRate));
                     configurations.get(configurations.size() - 1).configId = configId; // Assign config ID
                 }

@@ -25,8 +25,8 @@ public class Vendor implements Runnable{
     @Override
     public void run() {
         for (int i = 1; i <= totalTickets; i++) {
-
-            if (ticketPool.getTicketCount() == maxTicketCapacity){
+           int  count= ticketPool.getTicketCount()*4;
+            if (count == maxTicketCapacity){
                 System.out.println("Maximum ticket capacity reached for vendor"+(vendorId+1)+". Stopping the system.");
                 break; // Exit the loop
             }

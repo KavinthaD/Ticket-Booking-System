@@ -117,11 +117,6 @@ const TicketLineChart = ({ logs }) => {
         text: "Tickets Sold",
       },
       beginAtZero: true,
-      // ticks: {
-      //   callback: function(value) {
-      //     return Math.floor(value); // Round down to the nearest whole number
-      //   },
-      // },
     },
   },
 };
