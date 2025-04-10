@@ -1,6 +1,5 @@
 package com.ticketbookingsystem.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +28,7 @@ public class LoggingController {
         System.setOut(originalOut); // Restore original System.out
         System.out.println("Logging stopped at: " + System.currentTimeMillis());
     }
+
     @GetMapping("/api/logs")
     public List<String> getLogs() throws IOException {
         // Path to the log file

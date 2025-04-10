@@ -1,10 +1,7 @@
-
-
 public class Ticket {
     private String ticketId;
     private String eventName;
     private double ticketPrice;
-
 
 
     public Ticket(String ticketId, String eventName, double ticketPrice) {

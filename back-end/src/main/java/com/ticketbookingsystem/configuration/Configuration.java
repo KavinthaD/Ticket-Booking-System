@@ -2,10 +2,6 @@ package com.ticketbookingsystem.configuration;
 
 import jakarta.persistence.*;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 public class Configuration {
 

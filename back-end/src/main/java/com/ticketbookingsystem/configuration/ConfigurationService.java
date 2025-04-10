@@ -41,7 +41,7 @@ public class ConfigurationService {
 
         Vendor[] vendors = new Vendor[4]; // Create vendors and add tickets to ticket pool
         for (int i = 0; i < vendors.length; i++) {
-            vendors[i] = new Vendor(config.getMaxTicketCapacity(),config.getTotalTickets(), config.getTicketReleaseRate(), ticketPool, i);
+            vendors[i] = new Vendor(config.getMaxTicketCapacity(), config.getTotalTickets(), config.getTicketReleaseRate(), ticketPool, i);
             Thread vendorThread = new Thread(vendors[i], "Vendor ID-" + (i + 1)); //
             vendorThread.start();
         }

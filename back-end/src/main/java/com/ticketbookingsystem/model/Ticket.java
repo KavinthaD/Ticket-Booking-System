@@ -4,8 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 
-
-
 @Entity
 public class Ticket {
     @Id
@@ -14,14 +12,14 @@ public class Ticket {
     private double ticketPrice;
 
 
-
     public Ticket(String ticketId, String eventName, double ticketPrice) {
         this.ticketId = ticketId;
         this.eventName = eventName;
         this.ticketPrice = ticketPrice;
     }
 
-    public Ticket() {}
+    public Ticket() {
+    }
 
     public String getTicketId() {
         return ticketId;

@@ -1,11 +1,11 @@
-public class Customer implements Runnable{
+public class Customer implements Runnable {
 
     private int customerId;
     private TicketPool ticketPool;
     private int customerRetrivelRate;
     private int quantity;
 
-    public Customer(int customerId,TicketPool ticketPool, int customerRetrivelRate, int quantity) {
+    public Customer(int customerId, TicketPool ticketPool, int customerRetrivelRate, int quantity) {
         this.customerId = customerId;
         this.ticketPool = ticketPool;
         this.customerRetrivelRate = customerRetrivelRate;
